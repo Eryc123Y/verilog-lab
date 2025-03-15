@@ -1,0 +1,63 @@
+# Verilog / FPGA Development
+*.mti
+*.wlf
+*.mpf
+*.dsn
+*.log
+work/
+transcript
+
+# Quartus files
+*.qws
+*.qdf
+*.rpt
+*.summary
+*.smsg
+*.done
+*.pin
+*.pof
+*.sof
+db/
+incremental_db/
+output_files/
+simulation/
+
+# Xilinx ISE files
+*.bgn
+*.bit
+*.bld
+*.ngc
+*.ngd
+*.xst
+iseconfig/
+xlnx_auto_0_xdb/
+
+# Vivado files
+*.cache
+*.hw
+*.ip_user_files
+*.runs
+*.sim
+*.jou
+*.str
+
+# Simulation outputs
+*.vvp
+*.vcd
+
+# OS specific
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Backup files
+*.bak
