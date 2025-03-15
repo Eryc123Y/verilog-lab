@@ -1,10 +1,13 @@
 `include "others.v"
 
+
 module gates_test;
     reg a, b;
-    wire and_out, or_out, not_out, nor_out, xor_out;
+    wire nand_out, and_out, or_out, not_out, nor_out, xor_out;
+    integer i;
     
     // Instantiate all modules
+    Nand nand_gate(a, b, nand_out);
     And and_gate(a, b, and_out);
     Or or_gate(a, b, or_out);
     Not not_gate(a, not_out);
@@ -14,26 +17,24 @@ module gates_test;
     initial begin
         // Display header
         $display("Testing all logic gates");
-        $display("a b | AND OR NOT NOR XOR");
-        $display("----+----------------");
+        $display("a b | NAND AND OR  NOT NOR XOR");
+        $display("----+---------------------");
         
-        // Test all combinations
-        a = 0; b = 0;
-        #10 $display("%b %b | %b   %b  %b   %b   %b", a, b, and_out, or_out, not_out, nor_out, xor_out);
+        // Iterate through all test cases (00, 01, 10, 11)
+        for (i = 0; i < 4; i = i + 1) begin
+            // Set inputs based on bits of i
+            a = (i >> 1) & 1;
+            b = i & 1;
+            
+            // Wait for propagation
+            #10;
+            
+            // Display results
+            $display("%b %b |  %b    %b   %b   %b   %b   %b", a, b, 
+                     nand_out, and_out, or_out, not_out, nor_out, xor_out);
+        end
         
-        a = 0; b = 1;
-        #10 $display("%b %b | %b   %b  %b   %b   %b", a, b, and_out, or_out, not_out, nor_out, xor_out);
-        
-        a = 1; b = 0;
-        #10 $display("%b %b | %b   %b  %b   %b   %b", a, b, and_out, or_out, not_out, nor_out, xor_out);
-        
-        a = 1; b = 1;
-        #10 $display("%b %b | %b   %b  %b   %b   %b", a, b, and_out, or_out, not_out, nor_out, xor_out);
-    end
-    
-    // Generate waveform file (if your simulator supports it)
-    initial begin
-        $dumpfile("gates_test.vcd");
-        $dumpvars(0, gates_test);
+        // Exit simulation when done
+        $finish;
     end
 endmodule

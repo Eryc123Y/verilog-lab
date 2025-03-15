@@ -1,4 +1,4 @@
-`include "nand.v";
+`include "nand.v"
 
 module And(input a, b, output out);
     wire nand_out;
@@ -24,7 +24,7 @@ module Nor(input a, b, output out);
 endmodule
 
 module Xor(input a, b, output out);
-    wire nand_out, or_out
+    wire nand_out, or_out;
     Nand nand1(a, b, nand_out);
     Or or1(a, b, or_out);
     Nand nand2(nand_out, or_out, out);
