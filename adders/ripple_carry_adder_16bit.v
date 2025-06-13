@@ -1,4 +1,3 @@
-// filepath: /Users/eric/Documents/GitHub/verilog-lab/adders/ripple_carry_adder_16bit.v
 `include "adders/full_adder.v"
 
 module RippleCarryAdder16Bit(
