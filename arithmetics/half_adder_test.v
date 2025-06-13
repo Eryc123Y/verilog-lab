@@ -1,4 +1,4 @@
-`include "adders/half_adder.v"
+`include "arithmetics/half_adder.v"
 
 module half_adder_test;
     reg a, b;

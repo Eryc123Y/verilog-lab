@@ -1,4 +1,4 @@
-`include "nand.v"
+`include "logic-gates/nand.v"
 module binaryTest;
     reg a, b;
     wire out;

@@ -1,5 +1,4 @@
-// filepath: /Users/eric/Documents/GitHub/verilog-lab/adders/ripple_carry_adder_16bit_test.v
-`include "adders/ripple_carry_adder_16bit.v"
+`include "arithmetics/ripple_carry_adder_16bit.v"
 
 module ripple_carry_adder_16bit_test;
     reg [15:0] a, b;

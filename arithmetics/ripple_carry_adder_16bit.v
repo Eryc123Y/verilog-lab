@@ -1,4 +1,4 @@
-`include "adders/full_adder.v"
+`include "arithmetics/full_adder.v"
 
 module RippleCarryAdder16Bit(
     input [15:0] a, b,

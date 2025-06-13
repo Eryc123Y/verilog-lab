@@ -1,4 +1,4 @@
-`include "adders/full_adder.v"
+`include "arithmetics/full_adder.v"
 
 module full_adder_test;
     reg a, b, cin;
