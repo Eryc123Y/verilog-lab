@@ -1,3 +1,6 @@
+`ifndef RIPPLE_CARRY_ADDER_16BIT_V
+`define RIPPLE_CARRY_ADDER_16BIT_V
+
 `include "arithmetics/full_adder.v"
 
 module RippleCarryAdder16Bit(
@@ -31,3 +34,5 @@ module RippleCarryAdder16Bit(
     FullAdder fa15(a[15], b[15], carry[14], sum[15], cout);
     
 endmodule
+
+`endif // RIPPLE_CARRY_ADDER_16BIT_V

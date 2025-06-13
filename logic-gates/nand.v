@@ -1,3 +1,6 @@
+`ifndef NAND_V
+`define NAND_V
+
 module Nand (input a, b, output out);
     nmos n1(o1, 0, b);
     nmos n2(out, o1, a);
@@ -6,3 +9,5 @@ module Nand (input a, b, output out);
     pmos p2(out, 1, b);
     
 endmodule
+
+`endif // NAND_V

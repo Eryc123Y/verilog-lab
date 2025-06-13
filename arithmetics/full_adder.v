@@ -1,3 +1,6 @@
+`ifndef FULL_ADDER_V
+`define FULL_ADDER_V
+
 `include "arithmetics/half_adder.v"
 
 module FullAdder(input a, b, cin, output sum, cout);
@@ -6,3 +9,5 @@ module FullAdder(input a, b, cin, output sum, cout);
     HalfAdder ha2(sum1, cin, sum, carry2);
     Or or_gate(carry1, carry2, cout);
 endmodule
+
+`endif // FULL_ADDER_V

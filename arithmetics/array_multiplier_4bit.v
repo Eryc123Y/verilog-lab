@@ -1,3 +1,6 @@
+`ifndef ARRAY_MULTIPLIER_4BIT_V
+`define ARRAY_MULTIPLIER_4BIT_V
+
 `include "arithmetics/full_adder.v"
 
 module ArrayMultiplier4Bit(
@@ -72,3 +75,5 @@ module ArrayMultiplier4Bit(
     FullAdder fa61(p33, c33, c34, product[6], product[7]);
     
 endmodule
+
+`endif // ARRAY_MULTIPLIER_4BIT_V

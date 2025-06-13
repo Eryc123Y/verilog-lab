@@ -1,3 +1,6 @@
+`ifndef ADDER_SUBTRACTOR_16BIT_OVERFLOW_V
+`define ADDER_SUBTRACTOR_16BIT_OVERFLOW_V
+
 `include "arithmetics/ripple_carry_adder_16bit.v"
 
 /**
@@ -120,3 +123,5 @@ module AdderSubtractor16BitOverflow(
     // assign signed_overflow_alt = carry_into_msb ^ carry_out;
 
 endmodule
+
+`endif // ADDER_SUBTRACTOR_16BIT_OVERFLOW_V

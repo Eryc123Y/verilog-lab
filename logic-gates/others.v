@@ -1,3 +1,6 @@
+`ifndef OTHERS_V
+`define OTHERS_V
+
 `include "logic-gates/nand.v"
 
 module And(input a, b, output out);
@@ -31,3 +34,5 @@ module Xor(input a, b, output out);
     And and2(not_a, b, and2_out);
     Or or1(and1_out, and2_out, out);
 endmodule
+
+`endif // OTHERS_V
