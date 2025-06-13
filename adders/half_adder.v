@@ -1,4 +1,4 @@
-`include "../logic-gates/others.v"
+`include "logic-gates/others.v"
 
 module HalfAdder(input a, b, output sum, carry);
     // Instantiate XOR and AND gates

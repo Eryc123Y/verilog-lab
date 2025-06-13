@@ -1,5 +1,4 @@
-`include "half_adder.v"
-`include "../logic-gates/others.v"
+`include "adders/half_adder.v"
 
 module FullAdder(input a, b, cin, output sum, cout);
     wire sum1, carry1, carry2;

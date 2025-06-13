@@ -1,4 +1,4 @@
-`include "nand.v"
+`include "logic-gates/nand.v"
 
 module And(input a, b, output out);
     wire nand_out;
@@ -24,8 +24,10 @@ module Nor(input a, b, output out);
 endmodule
 
 module Xor(input a, b, output out);
-    wire nand_out, or_out;
-    Nand nand1(a, b, nand_out);
-    Or or1(a, b, or_out);
-    Nand nand2(nand_out, or_out, out);
+    wire not_a, not_b, and1_out, and2_out;
+    Not not1(a, not_a);
+    Not not2(b, not_b);
+    And and1(a, not_b, and1_out);
+    And and2(not_a, b, and2_out);
+    Or or1(and1_out, and2_out, out);
 endmodule

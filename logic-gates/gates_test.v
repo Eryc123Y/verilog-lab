@@ -1,4 +1,4 @@
-`include "others.v"
+`include "logic-gates/others.v"
 
 
 module gates_test;
