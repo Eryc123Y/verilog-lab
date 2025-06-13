@@ -1,4 +1,4 @@
-`include "adders/half_adder.v"
+`include "arithmetics/half_adder.v"
 
 module FullAdder(input a, b, cin, output sum, cout);
     wire sum1, carry1, carry2;
